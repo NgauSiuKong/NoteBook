@@ -1,0 +1,26 @@
+{
+    "name": "appbolaget/dd",
+    "description": "This package will add the helper functions dd and dump to your application.",
+    "type": "library",
+    "keywords": [
+        "dd",
+        "dump"
+    ],
+    "homepage": "https://appbolaget.se",
+    "authors": [
+        {
+            "name": "Robin Bertram",
+            "email": "robin.bertram@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "~3.2"
+    },
+    "autoload": {
+        "files": [
+            "src/dd.php",
+            "src/Dumper.php",
+            "src/HtmlDumper.php"
+        ]
+    }
+}

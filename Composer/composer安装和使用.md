@@ -39,3 +39,64 @@
 
 ##3,composer用法以及实战
 	
+**下载第三方扩展库**
+
+	搜索地址:https://packagist.org/
+	进入页面之后可执行搜索需要的扩展库,点击进入之后可看到此库的说明以及下载
+	在项目目录中执行下载语句可加载到此项目中
+
+	注:下载的composer的扩展库都在vendor的目录下	
+
+	composer.json	composer的配置文件，当前程序关于composer的配置信息
+
+	安装方法:
+		1,直接在命令行输入composer require [类库]的方式下载
+		2,在composer.json的require中直接写入需要下载的类库,执行composer update即可
+
+**常用命令**
+
+	composer require [需要下载的类库]
+		例如:composer require appbolaget/dd
+			 composer require nesbot/carbon
+	composer update
+		需要提前在composer.json中定义，可下载可删除
+			{
+    			"require": {
+       				"appbolaget/dd": "^1.1",
+        			"nesbot/carbon": "^1.22"
+    			}
+			}
+	composer install
+		直接安装composer.json中定义的条件进行下载类库
+		
+
+**简单示例**
+
+	<?php
+    header('content-type:text/html;charset=utf-8');
+    ini_set("display_errors",1);
+    //使用dd扩展库 This package will add the helper functions dd and dump to your application.
+    //引入composer加载文件
+    require_once "./vendor/autoload.php";
+    //使用dd友好方式输出并die掉程序函数和dump，友好方式输出函数
+    $str = "hello word";
+    $str1 = "NiuShao";
+    $str2 = array(
+        '1'=>'a',
+        '2'=>'b',
+        '3'=>'c',
+    );
+    /*
+    echo $str;
+    var_dump($str2);
+    dump($str);
+    dump($str1);
+    dump($str2);
+    dd($str2);
+    dd($str2);
+    */
+    //使用carbon库,注意命名空间
+    /*
+    dump( Carbon\Carbon::now() );
+    dd( Carbon\Carbon::now()->toDateTimeString());
+    */

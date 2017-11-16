@@ -1,0 +1,6 @@
+{
+    "require": {
+        "appbolaget/dd": "^1.1",
+        "nesbot/carbon": "^1.22"
+    }
+}
