@@ -1,6 +1,6 @@
-#composer安装以及使用
+##composer安装以及使用
 
-##1，composer简介
+###1，composer简介
 	
 **1>Composer**
 
@@ -14,7 +14,7 @@
 	依赖管理: 程序中使用的php库，交给composer管理
 	自动加载: 依赖库中的类以及用户自定义的类，Composer可以提供自动加载
 
-##2,winsows下安装composer
+###2,winsows下安装composer
 
 	1，开启open_ssl服务
 			在php.ini文件中，把注释的extension:extension=php_openssl.dll打开
@@ -37,7 +37,7 @@
 		简而言之就是命令行下执行composer config -g repo.packagist composer https://packagist.phpcomposer.com
 		命令即可,如果没有报错,安装成功
 
-##3,composer用法以及实战
+###3,composer用法以及实战
 	
 **下载第三方扩展库**
 
@@ -100,3 +100,47 @@
     dump( Carbon\Carbon::now() );
     dd( Carbon\Carbon::now()->toDateTimeString());
     */
+
+###自动加载
+
+**简介**
+
+	自动加载分三种情况
+		基于PSR-4规范的自动加载
+		基于类目录的自动加载
+		基于函数库文件的自动加载
+
+	自动加载使用流程：
+		composer.json中定于自动加载规则
+		使用命令composer dump-autoload生成自动加载文件
+		程序中引入自动加载规则,适用自定义类
+
+**实例说明**
+
+	"autoload":{ 
+    "psr-4":{ 
+        "App\\":"app/"
+    },
+    "classmap":[ 
+        "app/libs"
+    ],
+    "files":[ 
+        "app/functions/fun.php"
+    ]
+	}
+
+	psr-4，是psr-4规则自动加载,引入composer导入文件之后,开启
+	命名空间,实例化此类的时候即可自动加载
+	classmap:基于类目录自动加载,一般用户没有命名空间的类,实例
+	化此目录下类的时候,可自动加载
+	files,基于函数库文件的自动加载,一般对一些函数库的辅助函数,
+	使用此函数的时候,配置完成即可自动加载
+
+**代码实例**
+
+	git clone https://github.com/NgauSiuKong/NoteBook.git
+	下载即可
+
+
+
+	

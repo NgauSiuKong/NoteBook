@@ -1,6 +1,19 @@
 {
-    "require": {
+    "require":{
         "appbolaget/dd": "^1.1",
         "nesbot/carbon": "^1.22"
+    }
+
+    "autoload": {
+        "psr-4":{
+            "controller\\":"controller"
+        },
+        "classmap":[
+            "Modules"
+        ],
+        "files":[
+            "function/fun.php";
+        ]
+
     }
 }
