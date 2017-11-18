@@ -11,4 +11,5 @@ return array(
     '22d287673fb05a9ac9f86bf3b35680f2' => $vendorDir . '/appbolaget/dd/src/dd.php',
     'c54c1e352893e3d8c94af4f1df1cd8f3' => $vendorDir . '/appbolaget/dd/src/Dumper.php',
     'a5678475996ced6f4774ffdad364dba4' => $vendorDir . '/appbolaget/dd/src/HtmlDumper.php',
+    'ff29983cd6854b20f2cc9cb28e30fcc3' => $baseDir . '/class/function/fun.php',
 );

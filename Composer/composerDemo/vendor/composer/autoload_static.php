@@ -12,6 +12,7 @@ class ComposerStaticInitb327776b5f350b7e03103bf1c4072985
         '22d287673fb05a9ac9f86bf3b35680f2' => __DIR__ . '/..' . '/appbolaget/dd/src/dd.php',
         'c54c1e352893e3d8c94af4f1df1cd8f3' => __DIR__ . '/..' . '/appbolaget/dd/src/Dumper.php',
         'a5678475996ced6f4774ffdad364dba4' => __DIR__ . '/..' . '/appbolaget/dd/src/HtmlDumper.php',
+        'ff29983cd6854b20f2cc9cb28e30fcc3' => __DIR__ . '/../..' . '/class/function/fun.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -24,6 +25,10 @@ class ComposerStaticInitb327776b5f350b7e03103bf1c4072985
         'C' => 
         array (
             'Carbon\\' => 7,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
         ),
     );
 
@@ -44,6 +49,14 @@ class ComposerStaticInitb327776b5f350b7e03103bf1c4072985
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/class',
+        ),
+    );
+
+    public static $classMap = array (
+        'classdemo' => __DIR__ . '/../..' . '/class/Modules/classdemo.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -51,6 +64,7 @@ class ComposerStaticInitb327776b5f350b7e03103bf1c4072985
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb327776b5f350b7e03103bf1c4072985::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb327776b5f350b7e03103bf1c4072985::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitb327776b5f350b7e03103bf1c4072985::$classMap;
 
         }, null, ClassLoader::class);
     }

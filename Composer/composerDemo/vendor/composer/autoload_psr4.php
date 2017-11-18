@@ -10,4 +10,5 @@ return array(
     'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
+    'App\\' => array($baseDir . '/class'),
 );

@@ -1,5 +1,5 @@
 <?php
-    namespace \composerDemo\controller
+    namespace app\controller;
     class controller
     {
 
